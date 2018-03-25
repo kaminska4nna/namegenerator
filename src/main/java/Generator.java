@@ -16,10 +16,10 @@ public class Generator {
 
         String randomName = sb2.toString();
         if (randomName2.matches(vowles)){
-          randomLetter =  sb2.append(consonant.charAt(y.nextInt(alphabet.length()))).toString();
+          randomLetter =  sb2.append(consonant.charAt(y.nextInt(consonant.length()))).toString();
 
        }else {
-           randomLetter= sb2.append(vowles.charAt(y.nextInt(alphabet.length()))).toString();
+           randomLetter= sb2.append(vowles.charAt(y.nextInt(vowles.length()))).toString();
 
 
         }
