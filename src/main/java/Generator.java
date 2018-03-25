@@ -3,26 +3,31 @@ import java.util.Random;
 
 public class Generator {
     public static void main(String[] args) {
-        Random r = new Random();
         Random y = new Random();
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        String vowles ="eyuioa";
+        String consonant = "qwrtpsdfghjklzxcvbnm";
+        String randomLetter;
 
         final int N = 10;
         StringBuilder sb = new StringBuilder();
         StringBuilder sb2 = new StringBuilder();
+        String randomName2 =sb.append(alphabet.charAt(y.nextInt(alphabet.length()))).toString();
 
-
-        for (int i = 0; i < N; i++) {
-
-            sb2.append(alphabet.charAt(y.nextInt(alphabet.length())));
-        }
         String randomName = sb2.toString();
+        if (randomName2.matches(vowles)){
+          randomLetter =  sb2.append(consonant.charAt(y.nextInt(alphabet.length()))).toString();
 
-       String randomName2 =sb.append(alphabet.charAt(r.nextInt(alphabet.length()))).toString();
+       }else {
+           randomLetter= sb2.append(vowles.charAt(y.nextInt(alphabet.length()))).toString();
+
+
+        }
+
 
 
         System.out.println(randomName2.toUpperCase() +
-                 randomName);
+                 randomLetter);
 
 
 
